@@ -11,7 +11,7 @@ export const HomePage = () => {
         <>
         <h1>Homepage</h1>
         <section>
-            {user ? <p>Velkommen {user.user.firstname} {user.user.lastname}</p> : <p>Du er ikke logget ind</p>}
+            {user ? <p>Velkommen {user.firstname} {user.lastname}</p> : <p>Du er ikke logget ind</p>}
         </section>
         </>
 

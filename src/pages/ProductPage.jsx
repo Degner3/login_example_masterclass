@@ -6,7 +6,7 @@ export const ProductPage = () => {
   const {user} = useContext(UserContext)
 
   useEffect(() => {
-    let url = "http://localhost:3000/posters/list_by_genre/drama";
+    let url = "http://localhost:4000/poster/list";
     fetch(url)
       .then((res) => res.json())
       .then((data) => setData(data));
@@ -23,7 +23,7 @@ export const ProductPage = () => {
             method: "POST",
             headers: {Authorization: `Bearer ${user.access_token}`}
         }
-        let url = `http://localhost:3000/cart`
+        let url = `http://localhost:4000/cart`
         fetch(url, options).then(res => res.json()).then(data => console.log(data))
         alert(`Du har tilføjet ${_name} til kurven`)
     }

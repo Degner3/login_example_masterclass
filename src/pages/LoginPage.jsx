@@ -30,7 +30,7 @@ export const LoginPage = () => {
     }
     if (email && password) {
       setErrorMsg("");
-      let url = `http://localhost:3000/login`;
+      let url = `http://localhost:4000/login`;
       let body = new URLSearchParams();
       body.append("username", email);
       body.append("password", password);
@@ -68,7 +68,7 @@ export const LoginPage = () => {
       ) : (
         <div>
           <p>
-            Velkommen {user.user.firstname} {user.user.lastname}
+            Velkommen {user.firstname} {user.lastname}
           </p>
           <button onClick={handleLogout}>Logout</button>
         </div>

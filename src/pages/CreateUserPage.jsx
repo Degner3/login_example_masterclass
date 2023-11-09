@@ -12,7 +12,7 @@ export const CreateUserPage = () => {
     let password = event.target.password.value;
 
     if (firstName && lastName && email && password) {
-      let url = `http://localhost:3000/users`;
+      let url = `http://localhost:4000/users`;
 
       let body = new URLSearchParams();
       body.append("firstname", firstName);
